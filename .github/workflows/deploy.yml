@@ -6,6 +6,8 @@ on:
         - main
         - dev-* # dev-some dev-something-else
         - feat/** # feat/text feat/many/text
+    - paths-ignore:
+        - '.github/workflows/*'
 jobs:
   test:
     runs-on: ubuntu-latest
