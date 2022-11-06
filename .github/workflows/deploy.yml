@@ -2,12 +2,10 @@ name: Deploy project with lint and test
 on:
   workflow_dispatch:
   push:
-    - branches:
-        - main
-        - dev-* # dev-some dev-something-else
-        - feat/** # feat/text feat/many/text
-    - paths-ignore:
-        - '.github/workflows/*'
+    branches:
+      - main
+    paths-ignore:
+      - '.github/workflows/*'
 jobs:
   test:
     runs-on: ubuntu-latest
