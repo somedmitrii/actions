@@ -1,5 +1,11 @@
 name: Deploy project with lint and test
-on: [push, workflow_dispatch]
+on:
+  workflow_dispatch:
+  push:
+    - branches:
+        - main
+        - dev-* # dev-some dev-something-else
+        - feat/** # feat/text feat/many/text
 jobs:
   test:
     runs-on: ubuntu-latest
