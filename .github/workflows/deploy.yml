@@ -49,5 +49,6 @@ jobs:
         with:
           name: dist-artifact
       - name: Output contents
+        run: ls
       - name: Deploy to server
         run: echo "Deploy to server"
