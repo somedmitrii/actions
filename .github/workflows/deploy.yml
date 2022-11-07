@@ -4,7 +4,7 @@ on:
   push:
     branches:
       - deploy
-    paths-ignore:
+    paths:
       - '.github/workflows/*'
 jobs:
   test:
@@ -35,6 +35,13 @@ jobs:
         run: npm ci
       - name: Build project
         run: npm run build
+      - name: Upload artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: dist-artifact
+          path: |
+            dist
+            package.json
   deploy:
     needs: build
     runs-on: ubuntu-latest
