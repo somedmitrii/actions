@@ -16,7 +16,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React changed link test
+          Learn React changed link test cache
         </a>
       </header>
     </div>
