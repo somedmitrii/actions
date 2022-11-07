@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
   push:
     branches:
-      - main
+      - deploy
     paths-ignore:
       - '.github/workflows/*'
 jobs:
@@ -12,8 +12,6 @@ jobs:
     steps:
       - name: Get code
         uses: actions/checkout@v3
-      - name: Install Node JS
-        uses: actions/setup-node@v3
         with:
           node-version: 18
       - name: Install dependencies
@@ -25,8 +23,6 @@ jobs:
     steps:
       - name: Get code
         uses: actions/checkout@v3
-      - name: Install Node JS
-        uses: actions/setup-node@v3
         with:
           node-version: 18
       - name: Install dependencies
@@ -39,8 +35,6 @@ jobs:
     steps:
       - name: Get code
         uses: actions/checkout@v3
-      - name: Install Node JS
-        uses: actions/setup-node@v3
         with:
           node-version: 18
       - name: Install dependencies
