@@ -40,7 +40,7 @@ jobs:
         with:
           name: dist-artifact
           path: |
-            dist
+            build
             package.json
   deploy:
     needs: build
